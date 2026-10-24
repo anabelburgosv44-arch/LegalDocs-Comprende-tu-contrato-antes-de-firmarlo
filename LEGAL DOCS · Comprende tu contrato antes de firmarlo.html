@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LEGAL DOCS · Comprende tu contrato antes de firmarlo</title>
+<style>
+/* ===== Colores (rosa pastel casi café). Editar aquí para cambiar la paleta ===== */
+:root{--bg:#ffffff;--card:#ffffff;--rose:#eadfd6;--rose2:#f8f4f0;--brown:#7a5240;--deep:#3e2a22;--text:#33241e;--muted:#6e5a51;--line:#e8ddd5;--btn:#7a5240;--btnt:#fff;--shadow:0 6px 22px rgba(62,42,34,.10);color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#231a16;--card:#2e231e;--rose:#5a4338;--rose2:#2a201b;--brown:#d8b49c;--deep:#f5ebe5;--text:#eee1da;--muted:#c4ada1;--line:#4a382f;--btn:#d8b49c;--btnt:#231a16;--shadow:0 6px 22px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#231a16;--card:#2e231e;--rose:#5a4338;--rose2:#2a201b;--brown:#d8b49c;--deep:#f5ebe5;--text:#eee1da;--muted:#c4ada1;--line:#4a382f;--btn:#d8b49c;--btnt:#231a16;--shadow:0 6px 22px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,.brand,nav a,button,.tag{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+a{color:var(--brown)}
+:focus-visible{outline:3px solid var(--brown);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--deep);margin:0 0 10px}
+.lead{color:var(--muted);max-width:720px}
+/* Navegación */
+header{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px;flex-wrap:wrap}
+.brand{font-weight:800;letter-spacing:.08em;color:var(--deep);text-decoration:none;font-size:1.15rem}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 11px;border-radius:999px;text-decoration:none;color:var(--text);font-size:.92rem}
+nav a:hover{background:var(--rose2)}
+/* Botones */
+.btn{display:inline-block;border:2px solid var(--btn);background:var(--btn);color:var(--btnt);padding:12px 22px;border-radius:999px;font-weight:600;font-size:1rem;cursor:pointer;text-decoration:none}
+.btn.alt{background:transparent;color:var(--brown)}
+.btn:hover{filter:brightness(1.08)}
+/* Inicio */
+.hero{background:linear-gradient(160deg,var(--rose2),var(--bg) 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.1;color:var(--deep);margin:0 0 16px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.card h3{margin:6px 0 8px;color:var(--deep);font-size:1.1rem}
+.card p{margin:0}
+.ico{font-size:1.8rem}
+.num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--rose);color:var(--deep);font-weight:800;font-family:system-ui,sans-serif}
+/* Analizador */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+label{font-weight:600;font-family:"Segoe UI",system-ui,sans-serif;display:block;margin:12px 0 6px}
+textarea,input[type=file],select{width:100%;border:2px solid var(--line);border-radius:12px;padding:12px;background:var(--bg);color:var(--text);font:inherit}
+textarea{min-height:260px;resize:vertical}
+.warn{background:var(--rose2);border-left:6px solid var(--brown);border-radius:10px;padding:12px 16px;margin:14px 0;font-size:.95rem}
+.msg{margin:10px 0;font-weight:600;color:var(--brown);font-family:system-ui,sans-serif}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+#results{margin-top:30px}
+.tag{display:inline-block;font-size:.8rem;font-weight:700;padding:3px 12px;border-radius:999px;border:2px solid var(--brown);color:var(--deep)}
+.tag.p{background:var(--brown);color:var(--btnt)}
+.tag.r{background:var(--rose)}
+.tag.i{background:transparent;border-style:dashed}
+mark{background:var(--rose);color:inherit;padding:0 3px;border-radius:4px}
+blockquote{margin:10px 0;padding:8px 14px;border-left:4px solid var(--rose);background:var(--bg);border-radius:6px;font-style:italic;word-break:break-word}
+.card dl{margin:10px 0 0}.card dt{font-weight:700;font-family:system-ui,sans-serif;font-size:.9rem;color:var(--brown);margin-top:8px}.card dd{margin:0}
+.ex{font-style:italic;color:var(--muted)}
+/* Equipo y pie */
+.tel{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;font-family:system-ui,sans-serif;text-decoration:none}
+footer{background:#3e2a22;color:#f6e6e2;padding:44px 0 30px;font-size:.93rem}
+footer a{color:#f0cfc7}
+footer .grid{margin-top:0}
+.fine{border-top:1px solid rgba(255,255,255,.2);margin-top:22px;padding-top:16px}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}section{padding:46px 0}}
+@media print{header,.hero,section:not(#analizar),footer,.panel>*:not(#results),#analizar .lead,#analizar h2{display:none!important}.panel{box-shadow:none;border:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="brand" href="#inicio">⚖ LEGAL DOCS</a>
+<nav aria-label="Principal">
+<a href="#inicio">Inicio</a><a href="#como-funciona">Cómo funciona</a><a href="#analizar">Analizar contrato</a><a href="#riesgos">Cláusulas de riesgo</a><a href="#equipo">Nuestro equipo</a><a href="#contacto">Contacto</a>
+</nav></div></header>
+
+<main>
+<section id="inicio" class="hero"><div class="wrap">
+<div>
+<h1>Comprende tu contrato antes de firmarlo.</h1>
+<p class="lead">LEGAL DOCS utiliza herramientas digitales para ayudarte a identificar cláusulas que podrían representar riesgos en contratos de alquiler comercial en Bolivia, explicando su posible significado de forma clara y sencilla.</p>
+<div class="cta"><a class="btn" href="#analizar">Analizar mi contrato</a><a class="btn alt" href="#como-funciona">Conocer cómo funciona</a></div>
+</div>
+<svg viewBox="0 0 360 300" role="img" aria-label="Ilustración de un contrato digital con balanza de justicia y escudo de seguridad">
+<rect x="70" y="20" width="190" height="250" rx="16" fill="var(--card)" stroke="var(--brown)" stroke-width="3"/>
+<rect x="92" y="48" width="100" height="10" rx="5" fill="var(--rose)"/>
+<rect x="92" y="74" width="146" height="7" rx="3" fill="var(--line)"/><rect x="92" y="92" width="130" height="7" rx="3" fill="var(--line)"/>
+<rect x="92" y="110" width="146" height="7" rx="3" fill="var(--rose)"/><rect x="92" y="128" width="120" height="7" rx="3" fill="var(--line)"/>
+<rect x="92" y="146" width="140" height="7" rx="3" fill="var(--line)"/>
+<path d="M92 220q20-26 34-6t30-10 28 8" fill="none" stroke="var(--brown)" stroke-width="3" stroke-linecap="round"/>
+<circle cx="268" cy="86" r="46" fill="var(--rose)" opacity=".7"/>
+<path d="M268 54l32 12v22c0 22-14 36-32 44-18-8-32-22-32-44V66z" fill="var(--brown)"/>
+<path d="M254 90l10 10 18-22" fill="none" stroke="var(--btnt)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(250 190)" stroke="var(--deep)" stroke-width="3" fill="none" stroke-linecap="round"><path d="M40 0v70M10 70h60M0 18h80"/><path d="M0 18l-12 28h24zM80 18l-12 28h24z" fill="var(--rose)"/></g>
+</svg>
+</div>
+<div class="wrap"><div class="grid">
+<div class="card"><div class="ico">🔎</div><h3>Posibles cláusulas de riesgo</h3><p>Identificación de fragmentos que conviene revisar.</p></div>
+<div class="card"><div class="ico">💬</div><h3>Lenguaje sencillo</h3><p>Explicaciones claras, sin tecnicismos innecesarios.</p></div>
+<div class="card"><div class="ico">🧑‍⚖️</div><h3>Orientación para consultar</h3><p>Aspectos que conviene revisar con un profesional.</p></div>
+</div></div>
+
+<div class="wrap" style="padding-top:50px">
+<h2>¿Qué es LEGAL DOCS?</h2>
+<p class="lead" style="max-width:none">LEGAL DOCS es una propuesta académica de LegalTech que busca acercar la información jurídica a la ciudadanía mediante herramientas digitales.</p>
+<div class="grid">
+<div class="card"><h3>El problema</h3><p>Muchas personas tienen dificultad para comprender los contratos por su lenguaje técnico, redacción confusa, condiciones poco claras y falta de conocimientos jurídicos.</p></div>
+<div class="card"><h3>El alcance</h3><p>El proyecto se concentra inicialmente en los contratos de alquiler comercial y en la identificación preliminar de cláusulas que podrían perjudicar a alguna de las partes.</p></div>
+<div class="card"><h3>Público objetivo</h3><p>B2C: personas que necesitan comprender mejor los documentos que firman o están considerando firmar.</p></div>
+</div></div>
+</section>
+
+<section id="como-funciona"><div class="wrap">
+<h2>¿Cómo funciona?</h2>
+<div class="grid">
+<div class="card"><span class="num">1</span><h3>Introduce tu contrato</h3><p>Carga un archivo compatible o copia y pega el texto de tu contrato en el espacio de análisis.</p></div>
+<div class="card"><span class="num">2</span><h3>Analiza el contenido</h3><p>La herramienta busca expresiones y patrones relacionados con posibles riesgos contractuales.</p></div>
+<div class="card"><span class="num">3</span><h3>Revisa los resultados</h3><p>Se muestran los fragmentos que conviene examinar, el posible riesgo y recomendaciones generales para revisarlos.</p></div>
+<div class="card"><span class="num">4</span><h3>Busca orientación profesional</h3><p>Si hay condiciones que no comprendes, puedes considerar consultar a un abogado habilitado en Bolivia.</p></div>
+</div></div></section>
+
+<section id="analizar" style="background:var(--rose2)"><div class="wrap">
+<h2>Analiza tu contrato de alquiler comercial</h2>
+<p class="lead">Pega el texto o sube un archivo TXT. El análisis se hace en tu navegador: el texto no se envía a ningún servidor y no se guarda.</p>
+<div class="panel">
+<div class="warn" role="note"><strong>Advertencia:</strong> este analizador usa reglas de búsqueda de texto. Puede omitir problemas, interpretar mal ciertas expresiones o generar alertas que no correspondan a un riesgo jurídico real. No es inteligencia artificial ni asesoramiento legal.</div>
+<label for="file">Cargar archivo (TXT, PDF o DOCX)</label>
+<input id="file" type="file" accept=".txt,.pdf,.docx,text/plain">
+<label for="txt">Texto del contrato</label>
+<textarea id="txt" placeholder="Pega aquí el texto completo de tu contrato…"></textarea>
+<div id="chunkBox" hidden><label for="chunk">Fragmento a revisar</label><select id="chunk"></select></div>
+<div id="msg" class="msg" role="alert" aria-live="polite"></div>
+<div class="row"><button class="btn" id="go" type="button">Analizar contrato</button><button class="btn alt" id="clr" type="button">Borrar y comenzar de nuevo</button></div>
+<div id="results" aria-live="polite"></div>
+</div></div></section>
+
+<section id="riesgos"><div class="wrap">
+<h2>Cláusulas que conviene revisar</h2>
+<p class="lead">Los siguientes son <strong>ejemplos ficticios</strong> con fines educativos. No significa que sean ilegales por sí mismos: la evaluación depende del contrato completo, las circunstancias y el derecho boliviano aplicable.</p>
+<div class="grid" id="examples"></div>
+</div></section>
+
+<section id="marco" style="background:var(--rose2)"><div class="wrap">
+<h2>Marco jurídico de referencia</h2>
+<p class="lead">Fuentes bolivianas relevantes para el estudio de los contratos y la protección de las personas consumidoras, cuando corresponda.</p>
+<div class="grid">
+<div class="card"><h3>Código Civil boliviano</h3><p>Decreto Ley N.º 12760.</p><p><a href="https://www.lexivox.org/norms/BO-COD-DL12760B.html" target="_blank" rel="noopener">Consultar en Lexivox ↗</a></p></div>
+<div class="card"><h3>Ley N.º 453</h3><p>Ley General de los Derechos de las Usuarias y los Usuarios y de las Consumidoras y los Consumidores, cuando resulte aplicable.</p><p><a href="https://www.lexivox.org/norms/BO-L-N453.html" target="_blank" rel="noopener">Consultar en Lexivox ↗</a></p></div>
+<div class="card"><h3>Otras normas</h3><p>Otras normas bolivianas pertinentes, previa verificación de su vigencia y aplicabilidad.</p></div>
+</div>
+<div class="warn">Las fuentes se presentan con fines educativos. Cada caso requiere comprobar la normativa vigente y su aplicabilidad.</div>
+</div></section>
+
+<section id="equipo"><div class="wrap">
+<h2>Nuestro equipo</h2>
+<div class="grid">
+<div class="card"><div class="ico">🎨</div><h3>Barba Poiqui</h3><strong>Legal Product Designer</strong><p>Responsable de la experiencia de usuario y del diseño de la plataforma.</p></div>
+<div class="card"><div class="ico">⚙️</div><h3>Batallanos Farell Ana Reyna</h3><strong>Legal Engineer</strong><p>Responsable del enfoque jurídico y de la estructura de las reglas de revisión.</p></div>
+<div class="card"><div class="ico">🗂️</div><h3>Bravo, Cortez Maria Victoria</h3><strong>Legal Operations</strong><p>Responsable de la organización de los procesos y del funcionamiento operativo del proyecto.</p></div>
+<div class="card"><div class="ico">📅</div><h3>Burgos Villalba Anabel</h3><strong>Legal Project Manager</strong><p>Responsable de la coordinación, planificación y seguimiento del proyecto.</p></div>
+<div class="card"><div class="ico">📣</div><h3>Caballeros Leaños Ana Belen</h3><strong>Legal Agile &amp; Product Marketing</strong><p>Responsable del enfoque ágil, la propuesta de valor y la comunicación del producto.</p></div>
+</div></div></section>
+
+<section id="contacto" style="background:var(--rose2)"><div class="wrap">
+<h2>¿Necesitas orientación adicional?</h2>
+<p class="lead">Si después de revisar tu contrato necesitas orientación, puedes utilizar el siguiente número de contacto para consultar sobre posibles opciones de asistencia jurídica. Antes de contratar un servicio, verifica la identidad, las credenciales profesionales, la experiencia, los honorarios y las condiciones del servicio.</p>
+<p><a class="tel" href="tel:63493509">📞 63-49-35-09</a></p>
+<div class="warn">LEGAL DOCS no verifica la identidad ni las credenciales de la persona que responda a este número.</div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="grid">
+<div><strong style="font-size:1.1rem;letter-spacing:.08em">⚖ LEGAL DOCS</strong><p>Proyecto académico de LegalTech para orientar sobre contratos de alquiler comercial en Bolivia.</p></div>
+<div><strong>Secciones</strong><br><a href="#inicio">Inicio</a> · <a href="#como-funciona">Cómo funciona</a> · <a href="#analizar">Analizar</a> · <a href="#riesgos">Cláusulas</a> · <a href="#equipo">Equipo</a> · <a href="#contacto">Contacto</a></div>
+<div><strong>Fuentes jurídicas</strong><br><a href="#marco">Marco jurídico</a><br>Contacto: <a href="tel:63493509">63-49-35-09</a></div>
+</div>
+<div class="fine">
+<p><strong>Advertencia:</strong> LEGAL DOCS es un proyecto académico y una herramienta de orientación preliminar. La información proporcionada no constituye asesoramiento jurídico, no sustituye la revisión de un abogado habilitado y no garantiza la validez o invalidez de ninguna cláusula. Los resultados son orientativos y pueden contener errores u omisiones. Antes de firmar un contrato o tomar una decisión legal importante, se recomienda consultar a un profesional cualificado.</p>
+<p><strong>Privacidad:</strong> el texto del contrato se analiza localmente en tu navegador; esta página no lo envía a servidores externos ni lo almacena.</p>
+</div></div></footer>
+
+<script>
+/* ===== REGLAS DEL ANALIZADOR (transparentes y editables) =====
+   Cada regla: categoría, textos explicativos y patrones con nivel:
+   p = atención prioritaria · r = revisión recomendada · i = información insuficiente */
+const RULES=[
+{n:"Aumentos unilaterales del alquiler",why:"Si el precio puede cambiar sin criterio o procedimiento claro, no es posible prever cuánto pagarás.",q:"¿Con qué criterio, frecuencia y aviso previo puede cambiar el canon?",rec:"Verifica que el contrato defina porcentaje o índice, periodicidad y forma de notificación.",pats:[
+[/(aument|increment|reajust|modific|actualiz)[^.]{0,80}(canon|alquiler|precio|renta)[^.]{0,80}(unilateral|cualquier momento|discrecion|sin previo aviso|a su (sola )?voluntad|criterio del (propietario|arrendador))/gi,"p"],
+[/(canon|alquiler|renta)[^.]{0,60}podr[aá]\s+(ser\s+)?(aument|increment|modific|reajust)/gi,"r"],
+[/(aument|incremento|reajuste)[^.]{0,60}(canon|alquiler|renta)/gi,"i"]]},
+{n:"Retención del depósito de garantía",why:"Si no se explican motivos ni procedimiento, la devolución podría depender solo de la decisión de una parte.",q:"¿En qué casos, por qué monto y con qué comprobantes se puede retener la garantía?",rec:"Pide que el contrato detalle causas, plazos de devolución y la forma de justificar descuentos.",pats:[
+[/(garant[ií]a|dep[oó]sito)[^.]{0,100}(retener|retendr|retenci|no (ser[aá] )?(devuelt|reembols)|perder[aá]|a favor del (propietario|arrendador))/gi,"p"],
+[/(garant[ií]a|dep[oó]sito)[^.]{0,100}(descont|deduc)/gi,"r"]]},
+{n:"Reparaciones y mantenimiento",why:"Atribuir todas las reparaciones al inquilino puede ignorar que la responsabilidad a veces depende del origen del daño.",q:"¿Qué reparaciones corresponden a cada parte según su origen?",rec:"Solicita distinguir desgaste normal, daños por mal uso y reparaciones estructurales.",pats:[
+[/(todas? (las )?(reparaci|refacci)|todo (el )?mantenimiento|toda (clase de )?reparaci)[^.]{0,100}(inquilino|arrendatario|locatario)/gi,"p"],
+[/(inquilino|arrendatario|locatario)[^.]{0,100}(todas? (las )?(reparaci|refacci)|todo (el )?mantenimiento|cualquier (da[nñ]o|reparaci))/gi,"p"]]},
+{n:"Ingreso al inmueble",why:"El acceso sin aviso ni motivos razonables puede afectar el uso tranquilo del local.",q:"¿Con cuánta anticipación y en qué circunstancias puede ingresar el propietario?",rec:"Verifica que haya aviso previo, horarios y motivos definidos (salvo emergencias).",pats:[
+[/(ingres|entrar|acceder|acceso|visit|inspeccion)[^.]{0,80}(en cualquier (momento|hora)|sin (previo )?aviso|sin (previa )?autorizaci|sin notific)/gi,"p"],
+[/(propietario|arrendador)[^.]{0,60}(inspeccionar|ingresar|ingreso)/gi,"r"]]},
+{n:"Terminación del contrato y desalojo",why:"Una terminación inmediata o un desalojo sin distinguir procedimientos puede dejar poca claridad sobre tus derechos.",q:"¿Qué causas y qué procedimiento se aplican para terminar el contrato o pedir la entrega del local?",rec:"Revisa con un profesional qué procedimientos legales corresponden en tu caso.",pats:[
+[/(terminaci[oó]n|rescindir|rescisi[oó]n|resoluci[oó]n|resolver)[^.]{0,80}(inmediat|unilateral|sin (previo )?aviso|sin necesidad de (juicio|proceso|orden))/gi,"p"],
+[/(desaloj|desahuci|lanzamiento)[^.]{0,80}(inmediat|sin (previo )?(aviso|proceso|juicio|orden)|sin necesidad)/gi,"p"],
+[/(desaloj|desahuci)/gi,"r"]]},
+{n:"Multas y penalidades",why:"Sanciones sin monto, tope o criterio claro pueden resultar excesivas o impredecibles.",q:"¿Cuál es el monto exacto, el tope y la causa de cada multa?",rec:"Pide que cada penalidad tenga causa, monto o fórmula y límite definidos.",pats:[
+[/(multa|penalidad|penalizaci[oó]n)[^.]{0,80}(a criterio|sin l[ií]mite|que (el|la) (propietario|arrendador) (determine|fije|establezca))/gi,"p"],
+[/(multa|penalidad|penalizaci[oó]n|cl[aá]usula penal|sanci[oó]n)/gi,"r"]]},
+{n:"Obligaciones poco claras",why:"Términos imprecisos dificultan saber qué debe cumplir cada parte.",q:"¿Puede precisarse qué significa exactamente esta expresión y quién decide?",rec:"Reemplaza expresiones vagas por obligaciones concretas, plazos y responsables.",pats:[
+[/(y\/o|etc\.|entre otros|cualquier otro|las que (el|la) (propietario|arrendador) (considere|estime)|seg[uú]n (corresponda|convenga)|a su criterio|cuando (sea )?necesario|lo que corresponda)/gi,"i"]]},
+{n:"Renuncia de derechos",why:"Una renuncia amplia podría pretender eliminar derechos que la normativa protege; su validez requiere evaluación jurídica.",q:"¿Qué derechos concretos se renuncian y por qué?",rec:"Consulta con un profesional antes de aceptar cláusulas de renuncia.",pats:[
+[/renunci[a-z]*[^.]{0,80}(derecho|acci[oó]n|reclamo|indemniz|devoluci)/gi,"p"],
+[/no (podr[aá]|tendr[aá]) (derecho a )?(reclamar|demandar|exigir|impugnar)/gi,"p"],
+[/(expresamente renuncia|renuncia expresa)/gi,"r"]]}];
+const LV={p:["Atención prioritaria","p",3],r:["Revisión recomendada","r",2],i:["Información insuficiente","i",1]};
+const MAX=40000; // máximo de caracteres por fragmento analizado
+const $=id=>document.getElementById(id);
+const esc=s=>s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let chunks=[];
+
+/* Carga de archivos: solo TXT se lee; PDF/DOCX no se simulan */
+$("file").addEventListener("change",e=>{
+ const f=e.target.files[0]; if(!f)return;
+ const ext=f.name.split(".").pop().toLowerCase();
+ if(ext==="txt"||f.type==="text/plain"){
+  const r=new FileReader();
+  r.onload=()=>{$("txt").value=r.result;prep();$("msg").textContent="Archivo TXT cargado. Presiona “Analizar contrato”."};
+  r.onerror=()=>$("msg").textContent="No se pudo leer el archivo. Copia y pega el texto manualmente.";
+  r.readAsText(f);
+ } else {
+  e.target.value="";
+  $("msg").textContent="Esta versión no puede extraer texto de archivos "+ext.toUpperCase()+". Abre el documento, copia su contenido y pégalo en el cuadro de texto. No se leyó ningún archivo.";
+ }
+});
+$("txt").addEventListener("input",prep);
+$("chunk").addEventListener("change",()=>{$("results").innerHTML=""});
+
+/* Divide textos largos en fragmentos para revisarlos por separado */
+function prep(){
+ const t=$("txt").value; chunks=[];
+ for(let i=0;i<t.length;i+=MAX)chunks.push(t.slice(i,i+MAX));
+ const long=chunks.length>1;
+ $("chunkBox").hidden=!long;
+ $("chunk").innerHTML=chunks.map((c,i)=>`<option value="${i}">Fragmento ${i+1} de ${chunks.length}</option>`).join("");
+ if(long)$("msg").textContent="El contrato es muy largo para analizarlo de una vez. Elige un fragmento y analízalos uno por uno.";
+ else if($("msg").textContent.startsWith("El contrato es muy largo"))$("msg").textContent="";
+}
+
+$("go").addEventListener("click",()=>{
+ const full=$("txt").value;
+ if(!full.trim()){$("msg").textContent="El documento está vacío. Introduce el texto de tu contrato para analizarlo.";$("txt").focus();$("results").innerHTML="";return}
+ prep();
+ const text=chunks[+$("chunk").value||0]||full;
+ if(chunks.length<=1)$("msg").textContent="";
+ const found=[];
+ RULES.forEach(rule=>{
+  let best=null,snips=[];
+  rule.pats.forEach(([re,lv])=>{
+   re.lastIndex=0;let m,k=0;
+   while((m=re.exec(text))&&k<2&&snips.length<2){
+    const a=Math.max(0,m.index-60),b=Math.min(text.length,m.index+m[0].length+60);
+    const s=(a>0?"…":"")+esc(text.slice(a,m.index))+"<mark>"+esc(m[0].slice(0,220))+"</mark>"+esc(text.slice(m.index+Math.min(m[0].length,220),b))+(b<text.length?"…":"");
+    snips.push(s);k++;if(m[0].length===0)re.lastIndex++;
+    if(!best||LV[lv][2]>LV[best][2])best=lv;
+   }
+  });
+  if(best)found.push({rule,lv:best,snips});
+ });
+ found.sort((x,y)=>LV[y.lv][2]-LV[x.lv][2]);
+ let h='<h3 style="font-family:system-ui,sans-serif;font-size:1.5rem;color:var(--deep)">Resultados de tu análisis</h3>';
+ h+=found.length?'<div class="warn">Se encontraron fragmentos que conviene revisar. Una coincidencia no significa necesariamente que la cláusula sea ilegal o abusiva. Su validez depende del texto completo, las circunstancias y la legislación aplicable.</div>'
+  :'<div class="warn">No se identificaron patrones de riesgo mediante este análisis. Esto no garantiza que el contrato sea seguro ni que todas sus cláusulas sean válidas. Se recomienda revisar el documento completo.</div>';
+ h+='<div class="grid">'+found.map(f=>`<article class="card"><span class="tag ${LV[f.lv][1]}">${LV[f.lv][0]}</span><h3>${f.rule.n}</h3>
+ ${f.snips.map(s=>`<blockquote>${s}</blockquote>`).join("")}
+ <dl><dt>Posible problema</dt><dd>Posible riesgo que requiere evaluación jurídica según el contrato completo.</dd>
+ <dt>Por qué conviene revisarla</dt><dd>${f.rule.why}</dd>
+ <dt>Pregunta sugerida</dt><dd>${f.rule.q}</dd>
+ <dt>Recomendación general</dt><dd>${f.rule.rec}</dd></dl></article>`).join("")+'</div>';
+ if(found.length)h+='<div class="row"><button class="btn alt" type="button" onclick="window.print()">Imprimir o guardar resultados</button></div>';
+ h+='<p class="ex">Clasificación preliminar del sistema, no una determinación legal.</p>';
+ $("results").innerHTML=h;$("results").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+$("clr").addEventListener("click",()=>{
+ $("txt").value="";$("file").value="";$("results").innerHTML="";$("msg").textContent="";chunks=[];prep();$("txt").focus();
+});
+
+/* Ejemplos educativos ficticios */
+const EX=[
+["Aumento sin criterios","“El arrendador podrá modificar el canon cuando lo considere necesario.”","No se sabe cuánto, cuándo ni con qué aviso puede subir el precio.","¿Hay porcentaje, índice o plazo de aviso?"],
+["Retención de garantía","“La garantía podrá ser retenida total o parcialmente por el arrendador.”","No explica motivos ni cómo se comprueban los descuentos.","¿Qué gastos justifican retener y qué comprobantes se entregan?"],
+["Reparaciones muy amplias","“El inquilino asumirá todas las reparaciones del local, sin excepción.”","No distingue desgaste normal, mal uso o fallas estructurales.","¿Quién paga las reparaciones que no causó el inquilino?"],
+["Acceso sin condiciones","“El propietario podrá ingresar al inmueble en cualquier momento.”","Puede afectar el uso tranquilo del local y la actividad comercial.","¿Con cuánto aviso y en qué horarios puede ingresar?"],
+["Multas sin límites","“Se aplicará una multa que fijará el arrendador según su criterio.”","El monto es indeterminado y depende de una sola parte.","¿Cuál es el monto o tope y qué conducta sanciona?"],
+["Terminación poco clara","“El contrato terminará de inmediato si el arrendador lo estima conveniente.”","No aclara causas ni procedimiento para terminar o entregar el local.","¿Qué causas, plazos y pasos se aplican?"]];
+$("examples").innerHTML=EX.map(e=>`<article class="card"><span class="tag i">Ejemplo ficticio</span><h3>${e[0]}</h3><p class="ex">${e[1]}</p><dl><dt>Qué dudas genera</dt><dd>${e[2]}</dd><dt>Qué preguntar</dt><dd>${e[3]}</dd></dl></article>`).join("");
+</script>
+</body>
+</html>
